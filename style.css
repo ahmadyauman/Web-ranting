@@ -1,0 +1,196 @@
+/* ---- Penetapan Variabel Warna Sesuai Permintaan ---- */
+:root {
+    --bg-color: #006633;     /* Warna Background 1 */
+    --box-color: #30C0A5;    /* Warna Kotak 2 */
+    --element-1: #009783;   /* Elemen 3 */
+    --element-2: #F5E26E;   /* Elemen 4 */
+    --text-light: #FFFFFF;
+    --text-dark: #222222;
+}
+
+/* ---- Reset & Pengaturan Dasar ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* ---- Header ---- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    color: var(--element-2); /* Kuning */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* ---- Kartu Registrasi (Kotak Utama) ---- */
+.card-register {
+    background-color: var(--box-color); /* Teal */
+    color: var(--text-dark);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.card-register h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #003d1f; /* Hijau tua agar kontras di atas teal */
+}
+
+.qr-container {
+    margin: 25px 0;
+}
+
+.qr-container img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--text-light);
+    border-radius: 8px;
+}
+
+.qr-caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+/* ---- Galeri ---- */
+.card-gallery {
+    background-color: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.card-gallery h3 {
+    text-align: center;
+    color: var(--element-2); /* Kuning */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--element-1); /* Elemen Teal/Hijau */
+}
+
+/* ---- Footer & Link Sosial Media ---- */
+footer {
+    text-align: center;
+}
+
+footer h3 {
+    color: var(--element-2); /* Kuning */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-btn.instagram {
+    background-color: var(--element-2); /* Kuning */
+}
+
+.social-btn.tiktok {
+    background-color: var(--element-1); /* Elemen Teal/Hijau */
+    color: var(--text-light);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ---- Penyesuaian untuk Layar HP (Responsive) ---- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-register {
+        padding: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+    }
+}
